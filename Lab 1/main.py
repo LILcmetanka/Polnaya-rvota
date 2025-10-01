@@ -52,12 +52,11 @@ print("Результаты по категориям:")
 for letter, (median_val, stdev_val) in stats.items():
     print(f"{letter}: медиана={median_val}, отклонение={stdev_val}")
 
-
 medians = [m for m, _ in stats.values() if m is not None]
 
 median_of_medians = statistics.median(medians)
 stdev_of_medians = statistics.pstdev(medians)
 
 print("\nИтоговые показатели:")
-for letter in letters:
-    print(f"{letter}: медиана медиан={median_of_medians}, отклонение медиан={stdev_of_medians}")
+print(f"Медиана медиан={median_of_medians}, отклонение медиан={stdev_of_medians}")
+
